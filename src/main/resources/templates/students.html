@@ -42,7 +42,9 @@ xmlns:th="http://www.thymeleaf.org"
             <tr>
                 <th>Student First Name</th>
                 <th>Student Last Name</th>
-                <th>Student Email</th>
+<!--                <th>Student Email</th>-->
+                <th>Student Class</th>
+<!--                <th>Student Date Of Birth</th>-->
                 <th>Actions</th>
             </tr>
         </thead>
@@ -50,7 +52,9 @@ xmlns:th="http://www.thymeleaf.org"
             <tr th:each="student : ${students}">
                 <td th:text="${student.firstName}"></td>
                 <td th:text="${student.lastName}"></td>
-                <td th:text="${student.email}"></td>
+<!--                <td th:text="${student.email}"></td>-->
+                <td th:text="${student.studentClass}"></td>
+<!--                <td th:date="${student.dateOfBirth}"></td>-->
                 <td>
                     <a class="btn btn-primary"
                        th:href="@{/students/{studentId}/edit(studentId=${student.id})}">Edit</a>

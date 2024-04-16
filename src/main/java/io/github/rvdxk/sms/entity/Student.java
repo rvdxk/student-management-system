@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -21,4 +23,7 @@ public class Student {
     private String lastName;
     @Column(nullable = false, unique = true)
     private String email;
+    private String studentClass;
+    @Temporal(TemporalType.DATE)
+    private Date dateOfBirth;
 }
